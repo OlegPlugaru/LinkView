@@ -10,12 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            
+            Link(destination: URL(string: "https://www.apple.com")!, label: {
+                Text("Go To Apple")
+                    .bold()
+                    .frame(width: 280, height: 50)
+                    .foregroundColor(.white)
+                    .background(Color.black)
+                    .cornerRadius(12)
+            })
+            
+            Form {
+                Link("My Website", destination: URL(string: "https://apple.com")!)
+                Link("My Website", destination: URL(string: "https://apple.com")!)
+            }
         }
-        .padding()
     }
 }
 
